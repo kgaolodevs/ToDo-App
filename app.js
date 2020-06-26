@@ -45,10 +45,18 @@ const actions = {
     elements.formInput.value = "";
   },
   deleteItem: function (e) {
-    const triggerElement = e.target;
+    const element = e.target;
 
     // prettier-ignore
-    if (triggerElement.classList[0] === "app__delete-Btn") triggerElement.parentElement.remove();
+    if (element.classList[0] === "app__delete-Btn"){
+      const parent = element.parentElement;
+
+      // Animation
+      parent.classList.add("deleteAnimation")
+      parent.addEventListener("transitionend", function(){
+        parent.remove();
+      })
+    }
   },
   completedItem: function (e) {
     const triggerElement = e.target;

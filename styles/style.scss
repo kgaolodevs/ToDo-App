@@ -74,6 +74,7 @@ $color-secondary: #fd85a3;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
   }
 
   &__list--item {
@@ -101,5 +102,10 @@ $color-secondary: #fd85a3;
   .completed {
     text-decoration: line-through;
     opacity: 0.5;
+  }
+
+  .deleteAnimation {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
   }
 }
