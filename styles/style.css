@@ -1,1 +1,53 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+*,
+*:before,
+*:active {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #a965f6, #fd85a3);
+  color: #ffffff;
+  font-family: "Poppics", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app__title, .app__form {
+  min-height: 20vh;
+}
+
+.app__form--input, .app__form--btn {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+.app__form--btn {
+  color: #fd85a3;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.app__form--btn:hover {
+  background: #fd85a3;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

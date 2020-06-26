@@ -1,0 +1,48 @@
+*,
+*:before,
+*:active {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$color-primary: #a965f6;
+$color-secondary: #fd85a3;
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(120deg, $color-primary, $color-secondary);
+  color: #ffffff;
+  font-family: "Poppics", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+
+  &__title,
+  &__form {
+    min-height: 20vh;
+  }
+
+  &__form {
+    &--input,
+    &--btn {
+      padding: 0.5rem;
+      font-size: 2rem;
+      border: none;
+      background: white;
+    }
+
+    &--btn {
+      color: $color-secondary;
+      background: white;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: $color-secondary;
+        color: white;
+      }
+    }
+  }
+}
