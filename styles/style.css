@@ -31,6 +31,20 @@
   min-height: 20vh;
 }
 
+.app__form {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
 .app__form--input, .app__form--btn {
   padding: 0.5rem;
   font-size: 2rem;

@@ -25,6 +25,11 @@ $color-secondary: #fd85a3;
   }
 
   &__form {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     &--input,
     &--btn {
       padding: 0.5rem;
