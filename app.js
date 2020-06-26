@@ -7,8 +7,8 @@ const elements = {
 
 // Functions
 const actions = {
-  addItem: function (event) {
-    event.preventDefault(); // Prevent form submission
+  addItem: function (e) {
+    e.preventDefault(); // Prevent form submission
 
     // List Div
     const listDiv = document.createElement("div");
@@ -44,14 +44,20 @@ const actions = {
 
     elements.formInput.value = "";
   },
-  deleteItem: function (event) {
-    const triggerElement = event.target;
+  deleteItem: function (e) {
+    const triggerElement = e.target;
 
     // prettier-ignore
     if (triggerElement.classList[0] === "app__delete-Btn") triggerElement.parentElement.remove();
+  },
+  completedItem: function (e) {
+    const triggerElement = e.target;
+    // prettier-ignore
+    if(triggerElement.classList[0] === "app__complete-Btn") triggerElement.parentElement.classList.toggle("completed");
   },
 };
 
 // Event Listeners
 elements.formButton.addEventListener("click", actions.addItem);
 elements.list.addEventListener("click", actions.deleteItem);
+elements.list.addEventListener("click", actions.completedItem);

@@ -95,6 +95,11 @@ $color-secondary: #fd85a3;
 
   .fa-trash,
   .fa-check {
-    pointer-events: none;
+    pointer-events: none; // disable as target events
+  }
+
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
   }
 }

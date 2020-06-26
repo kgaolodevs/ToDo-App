@@ -120,4 +120,9 @@
 .app .fa-check {
   pointer-events: none;
 }
+
+.app .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 /*# sourceMappingURL=style.css.map */
