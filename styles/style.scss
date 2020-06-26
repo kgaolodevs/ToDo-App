@@ -78,6 +78,7 @@ $color-secondary: #fd85a3;
 
   &__list--item {
     flex: 1;
+    margin-right: 0.5rem;
   }
   &__complete-Btn,
   &__delete-Btn {
@@ -90,5 +91,10 @@ $color-secondary: #fd85a3;
   }
   &__complete-Btn {
     background: #5ac756;
+  }
+
+  .fa-trash,
+  .fa-check {
+    pointer-events: none;
   }
 }

@@ -9,7 +9,6 @@ const elements = {
 const actions = {
   addItem: function (event) {
     event.preventDefault(); // Prevent form submission
-    console.log("Item added");
 
     // List Div
     const listDiv = document.createElement("div");
@@ -43,9 +42,16 @@ const actions = {
     const appList = document.querySelector(".app__list");
     appList.appendChild(listDiv);
 
-    // elements.formInput.value = "";
+    elements.formInput.value = "";
+  },
+  deleteItem: function (event) {
+    const triggerElement = event.target;
+
+    // prettier-ignore
+    if (triggerElement.classList[0] === "app__delete-Btn") triggerElement.parentElement.remove();
   },
 };
 
 // Event Listeners
 elements.formButton.addEventListener("click", actions.addItem);
+elements.list.addEventListener("click", actions.deleteItem);
