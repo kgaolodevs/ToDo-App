@@ -13,6 +13,7 @@ const actions = {
 
     // List Div
     const listDiv = document.createElement("div");
+    listDiv.classList.add("app__item");
 
     // Create list item
     const item = document.createElement("li");
@@ -33,7 +34,7 @@ const actions = {
     // Create delete button
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = `<i class="fas fa-trash"></i>`;
-    deleteButton.classList.add("app__complete-Btn");
+    deleteButton.classList.add("app__delete-Btn");
 
     // Attach delete button to list div
     listDiv.appendChild(deleteButton);
@@ -42,7 +43,7 @@ const actions = {
     const appList = document.querySelector(".app__list");
     appList.appendChild(listDiv);
 
-    elements.formInput.value = "";
+    // elements.formInput.value = "";
   },
 };
 
