@@ -151,8 +151,8 @@ const actions = {
     });
   },
   deleteLocalItem: function (item) {
-    let retrievedItem = localStorage.getItem("To do");
-    let convertedItems = JSON.parse(retrievedItem);
+    let retrievedItems = localStorage.getItem("To do");
+    let convertedItems = JSON.parse(retrievedItems);
     let itemIndex = convertedItems.indexOf(item);
     if (itemIndex > -1) convertedItems.splice(itemIndex, 1);
     let newData = JSON.stringify(convertedItems);
@@ -166,5 +166,3 @@ elements.list.addEventListener("click", actions.deleteItem);
 elements.list.addEventListener("click", actions.completedItem);
 elements.filterItems.addEventListener("click", actions.filterItems);
 document.addEventListener("DOMContentLoaded", actions.retrieveLocalItems);
-
-localStorage.clear();
