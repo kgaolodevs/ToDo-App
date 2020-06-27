@@ -84,8 +84,19 @@ const actions = {
           } else {
             item.style.display = "flex";
           }
+          break;
       }
     });
+  },
+  saveItemsLocally: function (item) {
+    // Check if local storage has existing items
+    let allItems;
+    if (localStorage.getItem("allItems") === null) {
+      allItems = [];
+    } else {
+      allItems = JSON.parse(localStorage.getItem("allItems"));
+    }
+    allItems.push(item);
   },
 };
 
