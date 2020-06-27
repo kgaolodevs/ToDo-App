@@ -141,5 +141,8 @@ $color-secondary: #fd85a3;
     color: $color-primary;
     width: 10rem;
     padding: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
