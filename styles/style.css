@@ -140,6 +140,23 @@
   overflow: hidden;
 }
 
+.app__select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #a965f6;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.app__select:hover::after {
+  background: white;
+  color: #fd85a3;
+}
+
 .app__select--filter {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -148,6 +165,8 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
-  color: #fd85a3;
+  color: #a965f6;
+  width: 10rem;
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

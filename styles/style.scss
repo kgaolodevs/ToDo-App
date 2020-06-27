@@ -113,6 +113,22 @@ $color-secondary: #fd85a3;
     margin: 1rem;
     position: relative;
     overflow: hidden;
+
+    &::after {
+      content: "\25BC";
+      position: absolute;
+      background: $color-primary;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      pointer-events: none;
+      transition: 0.3s all ease;
+    }
+
+    &:hover::after {
+      background: white;
+      color: $color-secondary;
+    }
   }
 
   &__select--filter {
@@ -122,6 +138,8 @@ $color-secondary: #fd85a3;
     outline: none;
     box-shadow: none;
     border: none;
-    color: $color-secondary;
+    color: $color-primary;
+    width: 10rem;
+    padding: 1rem;
   }
 }

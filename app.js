@@ -3,6 +3,7 @@ const elements = {
   formInput: document.querySelector(".app__form--input"),
   formButton: document.querySelector(".app__form--btn"),
   list: document.querySelector(".app__list"),
+  filterItems: document.querySelector(".app__select--filter"),
 };
 
 // Functions
@@ -63,9 +64,33 @@ const actions = {
     // prettier-ignore
     if(triggerElement.classList[0] === "app__complete-Btn") triggerElement.parentElement.classList.toggle("completed");
   },
+  filterItems: function (e) {
+    const allItems = elements.list.childNodes;
+    allItems.forEach(function (item) {
+      switch (e.target.value) {
+        case "all":
+          item.style.display = "flex";
+          break;
+        case "completed":
+          if (item.classList.contains("completed")) {
+            item.style.display = "flex";
+          } else {
+            item.style.display = "none";
+          }
+          break;
+        case "todo":
+          if (item.classList.contains("completed")) {
+            item.style.display = "none";
+          } else {
+            item.style.display = "flex";
+          }
+      }
+    });
+  },
 };
 
 // Event Listeners
 elements.formButton.addEventListener("click", actions.addItem);
 elements.list.addEventListener("click", actions.deleteItem);
 elements.list.addEventListener("click", actions.completedItem);
+elements.filterItems.addEventListener("click", actions.filterItems);
