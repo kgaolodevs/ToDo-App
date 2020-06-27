@@ -133,4 +133,21 @@
           transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
 }
+
+.app__select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.app__select--filter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  color: #fd85a3;
+}
 /*# sourceMappingURL=style.css.map */
